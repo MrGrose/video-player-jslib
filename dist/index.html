@@ -4,6 +4,9 @@
   <title>Плеер</title>
   <meta charset="utf-8">
   <link rel="stylesheet" href="font-awesome.min.css">
+  <style type="text/css">
+    button.play {border-style:none;}
+  </style>
 </head>
 <body>
   <div id="player" style="width: 800px; height: 600px;">
@@ -19,7 +22,7 @@
     createPlayer({elementId: 'player'});
   </script>
 
-    <button>
+    <button class="play">
       <i class="fa fa-play" aria-hidden="true"></i>
     </button>
 
