@@ -10,6 +10,14 @@
       cursor: pointer;
       color: white;
       background-color:#11ffee00;
+      height: 30px;
+      width: 30px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    [hidden] {
+      display: none !important;
     }
   </style>
 </head>
@@ -18,12 +26,12 @@
     <div class="js-video-container" style="width: 100%; height: 100%"></div>
     <!-- Here can be placed player controls: play and volume buttons -->
     <div style="background-color:rgb(0, 0, 0)">
-    <button>
-      <i class="fa fa-play" aria-hidden="true"></i>
-    </button>
-    <button>
-      <i class="fa fa-pause" aria-hidden="true"></i>
-    </button>
+      <button class="js-play-button" hidden>
+        <i class="fa fa-play" aria-hidden="true"></i>
+      </button>
+      <button class="js-pause-button" hidden>
+        <i class="fa fa-pause" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 
@@ -33,6 +41,20 @@
 
   <script type="text/javascript">
     createPlayer({elementId: 'player'});
+    const playButton = document.querySelector('.js-play-button');
+    const pauseButton = document.querySelector('.js-pause-button');
+
+    playButton.addEventListener('click', () => {
+      player.play();
+      playButton.hidden = true;
+      pauseButton.hidden = false;
+    });
+
+    pauseButton.addEventListener('click', () => {
+      player.pause();
+      pauseButton.hidden = true;
+      playButton.hidden = false;
+    });
   </script>
 
 </body>
