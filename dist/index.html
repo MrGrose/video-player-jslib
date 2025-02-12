@@ -30,18 +30,20 @@
       box-shadow: 0px 0px 10px 5px grey;
     }
     #player{
-    display: flex;
-    flex-direction: column;
+      display: flex;
+      flex-direction: column;
     }
     .js-video-container{  
-    flex-grow: 1;
+      flex-grow: 1;
+    }
+    .js-fullscreen-button{
+      float: right;
     }
   </style>
 </head>
 <body>
   <div id="player" class="shadow-player">
     <div class="js-video-container"></div>
-    <!-- Here can be placed player controls: play and volume buttons -->
     <div class="button-background">
       <button class="js-play-button"  hidden>
         <i class="fa fa-play" aria-hidden="true" ></i>
@@ -55,6 +57,9 @@
       <button class="js-mute-button"  hidden>
         <i class="fa fa-volume-up" aria-hidden="true"></i>
       </button>
+      <button class="js-fullscreen-button">
+        <i class="fa fa-expand" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 
@@ -64,21 +69,6 @@
 
   <script type="text/javascript">
     createPlayer({elementId: 'player'});
-
-    const playButton = document.querySelector('.js-play-button');
-    const pauseButton = document.querySelector('.js-pause-button');
-
-    playButton.addEventListener('click', () => {
-      player.play();
-      playButton.hidden = true;
-      pauseButton.hidden = false;
-    });
-
-    pauseButton.addEventListener('click', () => {
-      player.pause();
-      pauseButton.hidden = true;
-      playButton.hidden = false;
-    });
   </script>
 
 </body>
