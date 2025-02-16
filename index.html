@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style type="text/css">
-    #player {
+ #player {
       display: flex;
       flex-direction: column;
       width: 800px;
@@ -54,14 +54,6 @@
     .right-buttons {
       display: flex;
     }
-    .viewing-progressbar {
-      width: 100%;
-      height: 5px;
-      background-color:  black;
-      margin: 0 10px;
-      cursor: pointer;
-      position: relative;
-    }
   
     .viewing-panel {
       display: flex;
@@ -75,13 +67,22 @@
       font-style: normal;
       font-variation-settings: "wdth" 100;
     }
-    .video-duration {
-      margin-left: 304px;
+
+    .progress {
+      width: 100%;
+      height: 5px;
+      background-color: grey;
+      position: relative;
+      cursor: pointer;
     }
-    .viewing-time {
-      margin-right: 280px;
+    .slider {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      background-color: red;
+      width: 0;
     }
-  
     </style>
   </head>
   <body>
@@ -106,6 +107,9 @@
   
         <div class="viewing-panel">
           <span class="viewing-time js-current-time"></span>
+          <div class="js-progress progress" style="background-color: grey;">
+            <div class="js-progress-slider slider" style="background-color: red;"></div>
+          </div>
           <span class="video-duration js-duration"></span>
         </div>
   
