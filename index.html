@@ -9,115 +9,114 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   <style type="text/css">
-  #player {
-    display: flex;
-    flex-direction: column;
-    width: 800px;
-    height: 600px;
-    box-shadow: 0px 0px 10px 5px grey;
-  }
-
-  .screen {
-    flex-grow: 1;
-    background-color: #000;
-  }
-
-  .player-button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background-color: transparent;
-    height: 40px; 
-    width: 40px; 
-    font-size: 20px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .bottom-controls {
-    background-color: black;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 5px 10px;
-  }
-
-  [hidden] {
-    display: none !important;
-  }
-
-  .left-buttons {
-    display: flex;
-    margin: 0px 0px 3px -4px; 
-  }
-
-  .right-buttons {
-    display: flex;
-  }
-  .viewing-progressbar {
-    width: 100%;
-    height: 5px;
-    background-color:  black;
-    margin: 0 10px;
-    cursor: pointer;
-    position: relative;
-  }
-
-  .viewing-panel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    width: 100%;
-    font-family: "Roboto", serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-    font-variation-settings: "wdth" 100;
-  }
-  .video-duration {
-    margin-left: 275px;
-  }
-  .viewing-time {
-    margin-right: 275px;
-  }
-
-  </style>
-</head>
-<body>
-  <div id="player" class="shadow-player">
-    <div class="screen js-video-container"></div>
-    <div class="bottom-controls">
-
-      <div class="left-buttons">
-        <button class="player-button js-play-button" hidden aria-label="Play">
-          <i class="fa fa-play" aria-hidden="true"></i>
-        </button>
-        <button class="player-button js-pause-button" hidden aria-label="Pause">
-          <i class="fa fa-pause" aria-hidden="true"></i>
-        </button>
-        <button class="player-button js-volume-button" hidden aria-label="Mute">
-          <i class="fa fa-volume-off" aria-hidden="true"></i>
-        </button>
-        <button class="player-button js-mute-button" hidden aria-label="Unmute">
-          <i class="fa fa-volume-up" aria-hidden="true"></i>
-        </button>
-      </div>
-
-      <div class="viewing-panel">
-        <span class="viewing-time js-current-time"></span>
-        <span class="video-duration js-duration"></span>
-      </div>
-
-      <div class="right-buttons">
-        <button class="player-button js-fullscreen-button" aria-label="Fullscreen">
-          <i class="fa fa-expand" aria-hidden="true"></i>
-        </button>
-        
+    #player {
+      display: flex;
+      flex-direction: column;
+      width: 800px;
+      height: 600px;
+      box-shadow: 0px 0px 10px 5px grey;
+    }
+  
+    .screen {
+      flex-grow: 1;
+      background-color: #000;
+    }
+  
+    .player-button {
+      border: none;
+      cursor: pointer;
+      color: white;
+      background-color: transparent;
+      height: 40px; 
+      width: 40px; 
+      font-size: 20px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+  
+    .bottom-controls {
+      background-color: black;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    [hidden] {
+      display: none !important;
+    }
+  
+    .left-buttons {
+      display: flex;
+      margin: 0px -2px 2px -4px;
+    }
+  
+    .right-buttons {
+      display: flex;
+    }
+    .viewing-progressbar {
+      width: 100%;
+      height: 5px;
+      background-color:  black;
+      margin: 0 10px;
+      cursor: pointer;
+      position: relative;
+    }
+  
+    .viewing-panel {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      width: 100%;
+      font-family: "Roboto", serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+    }
+    .video-duration {
+      margin-left: 304px;
+    }
+    .viewing-time {
+      margin-right: 280px;
+    }
+  
+    </style>
+  </head>
+  <body>
+    <div id="player" class="shadow-player">
+      <div class="screen js-video-container"></div>
+      <div class="bottom-controls">
+  
+        <div class="left-buttons">
+          <button class="player-button js-play-button" hidden aria-label="Play">
+            <i class="fa fa-play" aria-hidden="true"></i>
+          </button>
+          <button class="player-button js-pause-button" hidden aria-label="Pause">
+            <i class="fa fa-pause" aria-hidden="true"></i>
+          </button>
+          <button class="player-button js-volume-button" hidden aria-label="Mute">
+            <i class="fa fa-volume-off" aria-hidden="true"></i>
+          </button>
+          <button class="player-button js-mute-button" hidden aria-label="Unmute">
+            <i class="fa fa-volume-up" aria-hidden="true"></i>
+          </button>
+        </div>
+  
+        <div class="viewing-panel">
+          <span class="viewing-time js-current-time"></span>
+          <span class="video-duration js-duration"></span>
+        </div>
+  
+        <div class="right-buttons">
+          <button class="player-button js-fullscreen-button" aria-label="Fullscreen">
+            <i class="fa fa-expand" aria-hidden="true"></i>
+          </button>
+          
+        </div>
       </div>
     </div>
-  </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://unpkg.com/playable@2.10.3/dist/statics/playable.bundle.min.js"></script>
