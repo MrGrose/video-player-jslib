@@ -84,15 +84,28 @@
       left: 0;
       height: 100%;
       background-color: red;
+      border-radius: inherit;
       width: 0;
+    }
+    .dot {
+      position: absolute;
+      top: -4px;
+      right: -7px;
+      height: 9px;
+      width: 9px;
+      background-color: red;
+      border-radius: 50%;
+      display: inline-block;
+      border: 2px solid white;
     }
     </style>
   </head>
   <body>
     <div id="player" class="shadow-player">
+      
       <div class="screen js-video-container"></div>
       <div class="bottom-controls">
-  
+        
         <div class="left-buttons">
           <button class="player-button js-play-button" hidden aria-label="Play">
             <i class="fa fa-play" aria-hidden="true"></i>
@@ -110,8 +123,10 @@
   
         <div class="viewing-panel">
           <span class="viewing-time js-current-time"></span>
-          <div class="js-progress progress" style="background-color: grey;">
-            <div class="js-progress-slider slider" style="background-color: red;"></div>
+          <div class="js-progress progress">
+            <div class="js-progress-slider slider">
+              <span class="dot"></span>
+            </div>
           </div>
           <span class="video-duration js-duration"></span>
         </div>
@@ -120,7 +135,6 @@
           <button class="player-button js-fullscreen-button" aria-label="Fullscreen">
             <i class="fa fa-expand" aria-hidden="true"></i>
           </button>
-          
         </div>
       </div>
     </div>
