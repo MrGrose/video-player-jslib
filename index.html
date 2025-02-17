@@ -91,12 +91,20 @@
       position: absolute;
       top: -4px;
       right: -7px;
-      height: 9px;
-      width: 9px;
+      height: 8px;
+      width: 8px;
       background-color: red;
       border-radius: 50%;
       display: inline-block;
       border: 2px solid white;
+      opacity: 0;
+      transition-property: all;
+      transition-duration: 300ms;
+      transition-timing-function: ease-out;
+    }
+    .bottom-controls:hover .dot {
+      opacity: 1;
+      transition-timing-function: ease-in;
     }
     </style>
   </head>
